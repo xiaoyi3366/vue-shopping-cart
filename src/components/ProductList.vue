@@ -18,9 +18,9 @@
             }
         },
         computed:{
-            productList(){
-                return this.$store.productList.state.productList
-            }
+           productList(){
+               return this.$store.state.productList.productList
+           }
         },
         methods:{
             addShop(index){
@@ -28,9 +28,7 @@
             }
         },
         mounted(){
-            // console.log(this.$store.state.productList)
-            this.productList=this.$store.productList.state.productList
-            // console.log(this.productList)
+            
         }
     }
 </script>
