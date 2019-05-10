@@ -7,6 +7,7 @@
     <ProductList/>
     <hr>
     <h3>清单</h3>
+    <Cart/>
 
   </div>
 </template>

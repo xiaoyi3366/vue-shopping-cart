@@ -22,8 +22,22 @@ const state={
 
         }
     ],
+    all:[],
+}
+const mutations={
+    addCart(item){
+        console.log(item)
+        state.all.push({
+            id:item.id,
+            name:item.name,
+            price:item.price,
+            state:item.state
+        })
+        console.log(state.all)
+    }
 }
 export default {
     namespaced:true,
     state,
+    mutations,
 }
