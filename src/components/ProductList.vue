@@ -25,7 +25,7 @@
         methods:{
             addShop(item){
                 console.log(item)
-                this.$store.commit('productList/addCart',item);
+                this.$store.commit('cart/addCart',item);
             }
         },
         mounted(){

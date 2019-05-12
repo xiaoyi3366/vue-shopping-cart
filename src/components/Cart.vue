@@ -5,6 +5,7 @@
                 {{item.name}} -- {{item.price}} x {{item.number}}
             </li>
         </ul>
+        <p>合计：{{total}}</p>
     </div>
 </template>
 
@@ -17,11 +18,14 @@
         },
         computed: {
             cartList(){
-                return this.$store.state.productList.all
+                return this.$store.state.cart.all
+            },
+            total(){
+                return this.$store.state.cart.total;
             }
         },
         mounted(){
-            console.log(this.$store.state.productList.all)
+            console.log(this.$store.state.cart.all)
         }
     }
 </script>
