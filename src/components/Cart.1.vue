@@ -10,7 +10,6 @@
 </template>
 
 <script>
-    import { mapState } from 'vuex'
     export default {
         data(){
             return{
@@ -18,18 +17,15 @@
             }
         },
         computed: {
-            ...mapState({
-                cartList(state){
-                    return state.cart.all
-                },
-                total(state){
-                    return state.cart.total;
-                }
-            })
-            
+            cartList(){
+                return this.$store.state.cart.all
+            },
+            total(){
+                return this.$store.state.cart.total;
+            }
         },
         mounted(){
-            
+            console.log(this.$store.state.cart.all)
         }
     }
 </script>

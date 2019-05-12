@@ -11,7 +11,6 @@
 </template>
 
 <script>
-    import { mapState, mapMutations } from 'vuex'
     export default {
         data(){
             return{
@@ -19,17 +18,15 @@
             }
         },
         computed:{
-            ...mapState({
-                productList(state){
-                    return state.productList.productList
-                }
-            })
-           
+           productList(){
+               return this.$store.state.productList.productList
+           }
         },
         methods:{
-            ...mapMutations({
-                addShop: 'cart/addCart'
-            }),
+            addShop(item){
+                console.log(item)
+                this.$store.commit('cart/addCart',item);
+            }
         },
         mounted(){
             
